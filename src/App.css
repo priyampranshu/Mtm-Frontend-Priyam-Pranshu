@@ -1,38 +1,156 @@
-.App {
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a; /* Dark background */
+  padding: 20px;
+  background-image: url(123.jpeg);
+  background-size: cover;
+}
+
+/* Header styles */
+.header {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header h1 {
+  color: #ff6347; /* Coral color for company name */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-divider {
+  width: 100%;
+  height: 2px;
+  background-color: #ffa07a; /* Lighter coral color for divider line */
+  margin: 10px 0 20px; /* Adjusted margin */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Itinerary section styles */
+.itinerary-section {
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+  padding: 20px;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  margin-bottom: 20px; /* Added margin */
+}
+
+.itinerary-section h2 {
+  text-align: center;
+  color: #00ced1; /* Dark turquoise for section heading */
+  margin-bottom: 20px;
+}
+
+/* Task input form */
+form {
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: center; /* Center align form */
+}
+
+form input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #4caf50; /* Green border */
+  border-radius: 6px;
+  margin-right: 10px; /* Spacing between input and button */
+}
+
+form button {
+  padding: 12px 24px;
+  background-color: #4caf50; /* Green button */
   color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
 }
 
-.App-link {
-  color: #61dafb;
+form button:hover {
+  background-color: #45a049; /* Darker green on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Task list */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  background-color: #f0f0f0; /* Light gray background */
+  border-radius: 12px;
+  margin-bottom: 20px; /* Increased margin */
+  padding: 16px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.task-item:hover {
+  box-shadow: 0px 12px 24px rgba(0, 139, 139, 0.4); /* Aqua shadow on hover */
+  transform: scale(1.02); /* Slightly enlarge the task item */
+  background-color: #ffffff; /* White background on hover */
+}
+
+.task-item-content {
+  flex: 1;
+}
+
+.task-details {
+  margin-bottom: 8px;
+}
+
+.task-title {
+  font-weight: bold;
+  color: #333333; /* Dark gray title */
+}
+
+.task-description {
+  color: #666666;
+  transition: color 0.3s ease;
+}
+
+.task-description:hover {
+  color: #000000; /* Black text color on hover */
+}
+
+.task-date {
+  color: #555555; /* Gray date */
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.delete-button {
+  background-color: aqua; /* Red delete button */
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.delete-button:hover {
+  background-color: blue; /* Darker red on hover */
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  border-radius: 6px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.no-task {
+  padding: 12px;
+  text-align: center;
+  font-style: italic;
+  color: #999999;
 }
